@@ -4,10 +4,10 @@ from .. import _otio
 
 @add_method(_otio.Marker)
 def __str__(self):
-    return 'Marker("{}", {}, {}, {})'.format(
+    return 'Marker("{}", "{}", {}, {})'.format(
         self.name,
-        self.media_reference,
-        self.source_range,
+        self.color,
+        self.marked_range,
         self.metadata
     )
 
@@ -17,13 +17,13 @@ def __repr__(self):
     return (
         'otio.schema.Marker('
         'name={}, '
-        'media_reference={}, '
-        'source_range={}, '
+        'color={}, '
+        'marked_range={}, '
         'metadata={}'
         ')'.format(
             repr(self.name),
-            repr(self.media_reference),
-            repr(self.source_range),
+            repr(self.color),
+            repr(self.marked_range),
             repr(self.metadata),
         )
     )
